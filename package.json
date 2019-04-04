@@ -9,10 +9,15 @@
     "netlify-lambda": "^1.4.3",
     "serverless-http": "^1.9.1"
   },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babel-core": "^5.0.0",
+    "babel-loader": "^5.3.2"
+  },
   "scripts": {
     "start": "node server-local.js",
-    "build": "netlify-lambda build src/index.js",
-    "serve": "netlify-lambda serve src/index.js"
+    "build": "netlify-lambda build src",
+    "serve": "netlify-lambda serve src"
   },
   "repository": {
     "url": "https://github.com/slave4dead/NetlifyExpress"
