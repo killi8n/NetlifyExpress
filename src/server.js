@@ -10,7 +10,7 @@ router.get("/", (req, res) => {
 });
 
 app.use(bodyParser.json());
-app.use("/.netlify/functions/server", router);
+app.use("/", router);
 // app.get("/", (req, res) => {
 //   return res.status(200).json({ success: true });
 // });

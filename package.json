@@ -11,7 +11,8 @@
   },
   "scripts": {
     "start": "node server-local.js",
-    "build": "netlify-lambda build src"
+    "build": "netlify-lambda build src",
+    "serve": "netlify-lambda serve src"
   },
   "repository": {
     "url": "https://github.com/slave4dead/NetlifyExpress"
