@@ -6,11 +6,11 @@ const app = express();
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  return res.status(200).json({ status: 123123123 });
+  return res.status(200).json({ status: "Hello" });
 });
 
 app.use(bodyParser.json());
-app.use("/", router);
+app.use("/.netlify/functions/server", router);
 // app.get("/", (req, res) => {
 //   return res.status(200).json({ success: true });
 // });
