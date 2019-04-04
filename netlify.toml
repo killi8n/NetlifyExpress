@@ -1,5 +1,3 @@
 [build]
-  command = "npm run prod"
-  functions = "lambda"
-  publish = "lambda"
-  
+  command = "npm install && npm run build"
+  functions = "functions"

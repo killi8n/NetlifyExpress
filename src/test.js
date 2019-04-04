@@ -1,20 +1,19 @@
-// const express = require("express");
-// const serverless = require("serverless-http");
-// const bodyParser = require("body-parser");
+const express = require("express");
+const serverless = require("serverless-http");
+const bodyParser = require("body-parser");
 
-// const app = express();
+const app = express();
+const router = express.Router();
 
-// app.use(bodyParser.json());
-// // app.get("/", (req, res) => {
-// //   return res.status(200).json({ success: true });
-// // });
+router.get("/", (req, res) => {
+  return res.status(200).json({ status: 200 });
+});
 
-// module.exports = app;
-// module.exports.handler = serverless(app);
+app.use(bodyParser.json());
+app.use("/.netlify/functions/server", router);
+// app.get("/", (req, res) => {
+//   return res.status(200).json({ success: true });
+// });
 
-module.exports.handler = function(evt, ctx, cb) {
-  cb(null, {
-    statusCode: 200,
-    body: "Hello, World"
-  });
-};
+module.exports = app;
+module.exports.handler = serverless(app);
