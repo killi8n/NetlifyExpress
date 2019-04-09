@@ -40,10 +40,8 @@ async function buildHtml({ html, helmet }) {
     <html lang="en">
     <head>
         <meta charset="utf-8" />
-        <link rel="shortcut icon" href="./HeaderIcon.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="theme-color" content="#000000" />
-        <link rel="manifest" href="./manifest.json" />
         ${title.toString()}
         ${cssKeys}
     </head>
