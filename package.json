@@ -21,5 +21,13 @@
   },
   "repository": {
     "url": "https://github.com/slave4dead/NetlifyExpress"
+  },
+  "proxy": {
+    "/.netlify/functions": {
+      "target": "http://localhost:9000",
+      "pathRewrite": {
+        "^/\\.netlify/functions": ""
+      }
+    }
   }
 }
