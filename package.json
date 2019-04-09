@@ -16,8 +16,8 @@
   },
   "scripts": {
     "start": "nodemon server-local.js",
-    "build": "netlify-lambda build src",
-    "serve": "netlify-lambda serve src"
+    "build": "netlify-lambda build functions",
+    "serve": "netlify-lambda serve functions"
   },
   "repository": {
     "url": "https://github.com/slave4dead/NetlifyExpress"
