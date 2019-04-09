@@ -20,7 +20,7 @@ router.use("/.netlify/functions/server", router.routes());
 
 app.use(bodyParser());
 // app.use(express.static(path.join(__dirname, "../build")));
-app.use(serve(path.join(__dirname, "../build")));
+app.use(serve(path.join(__dirname, "./build")));
 // app.use("/.netlify/functions/server", router);
 app.use(router.routes()).use(router.allowedMethods());
 
