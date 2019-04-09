@@ -1,8 +1,9 @@
-const manifest = require("../build/asset-manifest.json.js");
+const manifest = require("../build/asset-manifest.json");
 const render = require("./index").default;
 
 function buildHtml({ html, helmet }) {
-  const title = { helmet };
+  const { title } = helmet;
+  //   console.log(title);
   const jsKeys = Object.keys(manifest)
     .filter(jsKey => jsKey.match(/.js$/))
     .map(key => {
@@ -41,9 +42,10 @@ function buildHtml({ html, helmet }) {
     `;
 }
 
-export default async (req, res) => {
+module.exports = async ctx => {
   try {
-    // const rendered = await render()
+    const rendered = await render(ctx);
+    ctx.body = buildHtml(rendered);
   } catch (e) {
     console.log(e);
     return buildHtml({});
