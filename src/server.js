@@ -16,7 +16,7 @@ const app = new Koa();
 //   ctx.body = "HELLO!";
 //   ctx.status = 200;
 // });
-router.use("/", router.routes());
+router.use("/.netlify/functions/server", router.routes());
 
 app.use(bodyParser());
 // app.use(express.static(path.join(__dirname, "../build")));
